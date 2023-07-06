@@ -23,4 +23,5 @@ def ex1():
     except ValidationException as ve:
         print(ve)
 
+
 ex1()
