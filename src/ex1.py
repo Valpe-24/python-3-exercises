@@ -19,7 +19,7 @@ def validate_file(file_name):
 
 def ex1():
     try:
-        validate_file("../files/input.txt")
+        validate_file("files/input.txt")
     except ValidationException as ve:
         print(ve)
 
