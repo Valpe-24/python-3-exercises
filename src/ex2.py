@@ -1,8 +1,7 @@
 import csv
 list_1 = []
-list_2 = []
-list_3 = []
-visits = 0
+# list_2 = []
+# list_3 = []
 
 def read_csv(input_file, row_list):
     with open(input_file) as csv_file:
@@ -11,13 +10,31 @@ def read_csv(input_file, row_list):
             row_list.append(row)
 
 def find_total_visits():
-    read_csv('../files/week-1.csv', list_1)
-    read_csv('../files/week-2.csv', list_2)
-    read_csv('../files/week-3.csv', list_3)
+    visits = 0
+    read_csv('files/week-1.csv', list_1)
+    read_csv('files/week-2.csv', list_1)
+    read_csv('files/week-3.csv', list_1)
      
-    for i in list: 
-        if '1' == i:
-            visits += 1
+    for index, item in enumerate(list_1): 
+        if index != 0:
+            for i in item: 
+                if '1' in i:
+                    visits += 1
+
+    # for index, item in enumerate(list_2): 
+    #     if index != 0:
+    #         for i in item: 
+    #             if '1' in i:
+    #                 visits += 1
+
+    # for index, item in enumerate(list_3): 
+    #     if index != 0:
+    #         for i in item: 
+    #             if '1' in i:
+    #                 visits += 1
+    return visits
+
+    
 
 
 
